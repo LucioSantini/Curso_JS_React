@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Navegador } from './components/NavBar'
 import { Saludo } from './components/ItemListContainer'
 import { Inicio } from './views/home'
-import { ProductoDetalle } from './views/itemdetailcontainer'
+import { ProductoDetalle } from './views/ItemDetailContainer'
 import { Error404 } from './views/Error404'
 
 import './App.css'
