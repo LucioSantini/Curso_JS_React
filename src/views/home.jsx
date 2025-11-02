@@ -1,24 +1,33 @@
 import { Link, useParams } from "react-router-dom";
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
+import { getFirestore, getDocs, collection} from "firebase/firestore";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-import data from "../data/products.json"
 import { Container } from "react-bootstrap";
 
 export const Inicio = () =>{
     const [products, setProducts] = useState([])
     const { categoriaId } = useParams()
 
+    const db = getFirestore();
+
+    const refColl = collection(db, "productos")
+
     useEffect(() =>{
 
-        new Promise((resolve, reject) =>{
-            setTimeout(() => resolve(data), 2000)
-        }).then(response => {
+        getDocs(refColl).then((snapshot) => {
+            const productos = snapshot.docs.map((doc) => ({
+                id: doc.id,
+                ...doc.data(),
+            }));
+            
+            return productos;
+        }).then(response =>{
             if (!categoriaId){
-                setProducts(data)
+                setProducts(response)
             }else{
-                const ProductosFiltrados = data.filter(product => product.categoria === categoriaId)
+                const ProductosFiltrados = response.filter(product => product.categoria === categoriaId)
                 setProducts(ProductosFiltrados)
             }
         })
