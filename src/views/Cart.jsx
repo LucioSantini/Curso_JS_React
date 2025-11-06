@@ -48,6 +48,17 @@ export const Carro = () => {
 			}
 		}).then((result) => {
 			if (result.isConfirmed) {
+
+				if (!ProductosAgregados || ProductosAgregados.length === 0) {
+					Swal.fire({
+						icon: "warning",
+						title: "Carrito vacío",
+						text: "No hay productos agregados al carrito.",
+						confirmButtonText: "OK",
+					});
+					return; // cortamos la ejecución si no hay productos
+				}
+
       			const { nombre, mail, telefono } = result.value
 				const orden = {
 					Comprador:{
