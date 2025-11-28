@@ -4,9 +4,9 @@ import { Navegador } from './components/NavBar'
 import { Saludo } from './components/ItemListContainer'
 import { Inicio } from './views/home'
 import { ProductoDetalle } from './views/ItemDetailContainer'
-import { Error404 } from './views/Error404'
+import { Error404 } from './views/error404'
 import { CartProvider } from './context/CartProvider'
-import { Carro } from './views/Cart.Jsx'
+import { Carro } from './views/cart.Jsx'
 
 import './App.css'
 
