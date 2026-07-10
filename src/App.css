@@ -5,12 +5,75 @@
   text-align: center;
 } */
 
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Playwrite+RO:wght@100..400&display=swap');
+
+body {
+  padding-top: 10rem; /* 56px es la altura estándar del navbar de Bootstrap */
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.nav {
+  background-color: #add0ff !important;
+  height: auto;
+  padding: 0.3rem 0 !important;
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  padding: 1rem 0 !important;
+}
+
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 6.5em;
+  padding: 0;
+  margin: 0;
   will-change: filter;
   transition: filter 300ms;
 }
+
+.Navbar_Brand {
+  font-family: "Playwrite RO", cursive;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-size: 1rem;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Links del navbar */
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 0.25rem 0.5rem !important;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* Dropdown */
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 0.25rem 0.5rem !important;
+}
+
+/* Carrito */
+.Carrito {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.container-fluid {
+  display: flex;
+  gap: 1rem;  /* Ajusta el valor según necesites */
+  align-items: center;
+}
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
@@ -31,12 +94,4 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

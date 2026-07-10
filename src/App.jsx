@@ -1,7 +1,7 @@
 import { BrowserRouter, Router, Route, Routes } from 'react-router-dom'
 import { useState } from 'react'
 import { Navegador } from './components/NavBar'
-import { Saludo } from './components/ItemListContainer'
+//import { Saludo } from './components/ItemListContainer'
 import { Inicio } from './views/home'
 import { ProductoDetalle } from './views/ItemDetailContainer'
 import { Error404 } from './views/error404'
